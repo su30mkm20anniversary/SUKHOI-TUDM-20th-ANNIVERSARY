@@ -1,426 +1,65 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#06111d">
-<title>Sukhoi TUDM | 20th Anniversary 2007–2027</title>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sukhoi Su-30MKM 20th Anniversary | TUDM</title>
 <style>
-:root {
-  --bg: #06111d;
-  --panel: #0d2638;
-  --gold: #e2bd70;
-  --white: #f5f7fb;
-  --muted: #b8c7d4;
-  --line: rgba(255,255,255,.13);
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--white);
-  font: 16px/1.7 Arial, Helvetica, sans-serif;
-}
-a { color: inherit; text-decoration: none; }
-.wrap { width: min(1180px, 92%); margin: auto; }
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: rgba(4,15,25,.96);
-  border-bottom: 1px solid rgba(226,189,112,.35);
-  box-shadow: 0 8px 30px rgba(0,0,0,.25);
-  backdrop-filter: blur(12px);
-}
-nav {
-  min-height: 82px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 22px;
-  padding: 12px 0;
-}
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 800;
-  letter-spacing: .06em;
-  white-space: nowrap;
-}
-.brand img {
-  width: 46px;
-  height: 46px;
-  object-fit: contain;
-  padding: 3px;
-  background: #fff;
-  border: 1px solid var(--gold);
-  border-radius: 50%;
-}
-.brand span { color: var(--gold); line-height: 1.25; }
-.navlinks {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  color: var(--muted);
-  font-size: .86rem;
-}
-.navlinks a:not(.btn):hover { color: var(--gold); }
-
-.btn {
-  display: inline-block;
-  padding: 12px 19px;
-  border-radius: 5px;
-  background: var(--gold);
-  color: #101820;
-  border: 1px solid var(--gold);
-  font-weight: 800;
-  box-shadow: 0 7px 20px rgba(216,182,106,.13);
-  transition: .2s ease;
-}
-.btn:hover { transform: translateY(-2px); }
-.btn.outline { background: transparent; color: var(--white); }
-
-.eyebrow {
-  color: var(--gold);
-  text-transform: uppercase;
-  letter-spacing: .2em;
-  font-size: .76rem;
-  font-weight: 800;
-}
-.hero {
-  min-height: 82vh;
-  display: flex;
-  align-items: center;
-  background:
-    linear-gradient(90deg,rgba(3,12,21,.94),rgba(3,12,21,.60) 58%,rgba(3,12,21,.25)),
-    linear-gradient(0deg,var(--bg),transparent 40%),
-    url('assets/sukhoi_hero.png') center/cover;
-}
-.hero-content { padding: 90px 0; max-width: 760px; }
-.hero h1 {
-  margin: 18px 0;
-  font-size: clamp(2.8rem,7vw,5.7rem);
-  line-height: .98;
-  letter-spacing: -.04em;
-  text-shadow: 0 8px 30px rgba(0,0,0,.45);
-}
-.hero h1 em { color: var(--gold); font-style: normal; }
-.hero p { max-width: 620px; color: var(--muted); font-size: 1.08rem; }
-.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
-.yearline { display: flex; align-items: center; gap: 14px; margin-top: 30px; color: var(--muted); }
-.yearline strong { color: var(--white); font-size: 1.25rem; }
-.yearline .line { width: 65px; height: 1px; background: var(--gold); }
-
-.countdown { margin-top: 30px; max-width: 560px; }
-.countdown-label {
-  margin-bottom: 10px;
-  color: var(--gold);
-  font-size: .76rem;
-  font-weight: 800;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-}
-.countdown-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; }
-.countdown-unit {
-  padding: 13px 8px;
-  text-align: center;
-  border: 1px solid rgba(226,189,112,.4);
-  background: rgba(3,14,23,.7);
-  border-radius: 6px;
-}
-.countdown-unit strong { display: block; font-size: clamp(1.4rem,3vw,2.2rem); line-height: 1.2; }
-.countdown-unit span { color: var(--muted); font-size: .68rem; text-transform: uppercase; letter-spacing: .1em; }
-.countdown-message { color: var(--muted); font-size: .8rem; margin-top: 8px; }
-
-section { padding: clamp(58px,7vw,88px) 0; }
-.section-head { max-width: 720px; margin-bottom: 36px; }
-.section-head h2 { font-size: clamp(2rem,4vw,3.2rem); line-height: 1.1; letter-spacing: -.03em; margin: 10px 0; }
-.section-head p { color: var(--muted); }
-.grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
-.tile {
-  padding: 26px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
-  transition: .2s ease;
-}
-.tile:hover { transform: translateY(-4px); border-color: rgba(226,189,112,.5); }
-.num { color: var(--gold); font-size: 2rem; font-weight: 800; }
-.tile p, .year p { color: var(--muted); }
-
-.mission-vision { background: linear-gradient(135deg,#0d2638,#071522); border-block: 1px solid var(--line); }
-.mv-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
-.mv-card {
-  padding: 30px;
-  border: 1px solid rgba(226,189,112,.4);
-  border-radius: 8px;
-  background: rgba(0,0,0,.16);
-}
-.mv-label { color: var(--gold); font-size: .76rem; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; }
-.mv-card h3 { font-size: clamp(1.5rem,3vw,2rem); line-height: 1.2; margin: 14px 0; }
-.mv-card p { color: var(--muted); margin: 0; }
-
-.timeline { display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid rgba(226,189,112,.4); }
-.year { padding: 24px 20px 0 0; }
-.year strong { color: var(--gold); font-size: 2rem; }
-
-.trailer-section { background: #091c2a; border-block: 1px solid var(--line); }
-.trailer-frame {
-  overflow: hidden;
-  border: 1px solid rgba(226,189,112,.48);
-  border-radius: 10px;
-  background: #000;
-  box-shadow: 0 22px 55px rgba(0,0,0,.35);
-}
-.trailer-frame video { display: block; width: 100%; aspect-ratio: 16/9; max-height: 680px; object-fit: contain; background: #000; }
-.trailer-caption { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; color: var(--muted); font-size: .85rem; padding-top: 12px; }
-
-.gallery { display: grid; grid-template-columns: 1.2fr .8fr; gap: 16px; }
-.photo {
-  min-height: 320px;
-  display: flex;
-  align-items: end;
-  padding: 22px;
-  border: 1px solid rgba(226,189,112,.25);
-  border-radius: 8px;
-  font-weight: 800;
-  letter-spacing: .08em;
-  background:
-    linear-gradient(0deg,rgba(0,0,0,.75),transparent 70%),
-    url('assets/sukhoi_hero.png') center/cover;
-}
-.photo:nth-child(2) {
-  background-image:
-    linear-gradient(0deg,rgba(0,0,0,.75),transparent 70%),
-    url('assets/sukhoi_airshow.jpeg');
-}
-
-.rsvp { background: linear-gradient(135deg,var(--panel),var(--bg)); border-block: 1px solid var(--line); }
-.rsvp-panel { display: grid; grid-template-columns: 1.2fr .8fr; gap: 32px; align-items: center; }
-.rsvp-box {
-  padding: 28px;
-  border: 1px solid rgba(226,189,112,.5);
-  border-radius: 9px;
-  background: linear-gradient(145deg,rgba(255,255,255,.06),rgba(0,0,0,.16));
-}
-.rsvp-box p, .small { color: var(--muted); }
-.small { font-size: .84rem; }
-footer { padding: 28px 0; color: var(--muted); font-size: .85rem; border-top: 1px solid var(--line); }
-
-@media(max-width:900px) {
-  nav { align-items: flex-start; flex-direction: column; }
-  .navlinks { width: 100%; overflow-x: auto; padding: 2px 0 8px; white-space: nowrap; }
-}
-@media(max-width:760px) {
-  .grid, .timeline, .mv-grid, .rsvp-panel, .gallery { grid-template-columns: 1fr; }
-  .hero { min-height: 72vh; }
-  .hero-content { padding: 62px 0; }
-  .photo { min-height: 250px; }
-  .countdown-grid { gap: 6px; }
-  .countdown-unit { padding: 10px 4px; }
-}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#071426;color:#fff}
+header{text-align:center;padding:24px 12px;background:#0b1d33;border-bottom:2px solid #c9a64b}
+.logos{display:flex;justify-content:center;align-items:center;gap:24px;flex-wrap:wrap}
+.logos img{width:90px;height:90px;object-fit:contain;background:#fff;border-radius:8px;padding:5px}
+h1{color:#e6c56b;font-size:clamp(25px,5vw,42px);margin:22px 0 8px}
+h2{color:#e6c56b}
+.hero{text-align:center;padding:60px 20px;background:linear-gradient(#071426bb,#071426ee),url('assets/sukhoi_hero.png') center/cover}
+.hero p{max-width:700px;margin:15px auto;line-height:1.7}
+section{max-width:900px;margin:auto;padding:35px 20px;line-height:1.7}
+.btn{display:inline-block;background:#c9a64b;color:#071426;padding:13px 22px;border-radius:5px;text-decoration:none;font-weight:bold;margin-top:12px}
+footer{text-align:center;padding:20px;color:#b9c3d0;border-top:1px solid #34445a}
 </style>
 </head>
-
 <body>
 <header>
-  <div class="wrap">
-    <nav>
-      <a class="brand" href="#home">
-        <img src="assets/tudm_crest.png" alt="TUDM crest">
-        <img src="assets/squadron_badge.png" alt="12 Squadron badge">
-        <span>SUKHOI TUDM / 20</span>
-      </a>
-      <div class="navlinks">
-        <a href="#legacy">Legacy</a>
-        <a href="#timeline">Timeline</a>
-        <a href="#mission-vision">Mission &amp; Vision</a>
-        <a href="#trailer">Trailer</a>
-        <a href="#gallery">Gallery</a>
-        <a class="btn" href="#rsvp">RSVP</a>
-      </div>
-    </nav>
+  <div class="logos">
+    <img src="assets/tudm_crest.png" alt="Logo TUDM">
+    <img src="assets/squadron_11.png" alt="Logo 11 Skuadron">
+    <img src="assets/squadron_badge.png" alt="Logo 12 Skuadron">
   </div>
+  <h1>SUKHOI Su-30MKM</h1>
+  <p>20TH ANNIVERSARY · 2007–2027</p>
 </header>
 
-<main>
-<section class="hero" id="home">
-  <div class="wrap">
-    <div class="hero-content">
-      <div class="eyebrow">Royal Malaysian Air Force · 12 Squadron</div>
-      <h1>20 YEARS<br>OF <em>EXCELLENCE.</em></h1>
-      <p>Honouring two decades of the Sukhoi Su-30MKM in Malaysian skies — a legacy of service, professionalism and air power.</p>
-      <div class="actions">
-        <a class="btn" href="#rsvp">CONFIRM ATTENDANCE</a>
-        <a class="btn outline" href="#legacy">EXPLORE THE LEGACY</a>
-      </div>
-      <div class="yearline"><strong>2007</strong><span class="line"></span><strong>2027</strong><span>· 20th Anniversary</span></div>
+<div class="hero">
+  <h2>Celebrating 20 Years of Excellence</h2>
+  <p>Honouring the legacy, dedication and operational excellence of the Sukhoi Su-30MKM in the Royal Malaysian Air Force.</p>
+</div>
 
-      <div class="countdown" aria-label="Countdown to the 20th Anniversary">
-        <div class="countdown-label">Countdown to 20 April 2027</div>
-        <div class="countdown-grid">
-          <div class="countdown-unit"><strong id="cd-days">---</strong><span>Days</span></div>
-          <div class="countdown-unit"><strong id="cd-hours">--</strong><span>Hours</span></div>
-          <div class="countdown-unit"><strong id="cd-minutes">--</strong><span>Minutes</span></div>
-          <div class="countdown-unit"><strong id="cd-seconds">--</strong><span>Seconds</span></div>
-        </div>
-        <div class="countdown-message" id="cd-message">Counting down to the anniversary.</div>
-      </div>
-    </div>
-  </div>
+<section>
+  <h2>REGISTER YOUR INTEREST</h2>
+  <p>The Sukhoi Su-30MKM 20th Anniversary Ceremony is tentatively planned for April–June 2027.</p>
+  <p>Register your interest to help us estimate the potential number of attendees for planning purposes.</p>
+  <p><strong>This is not a formal RSVP.</strong> The official RSVP process will commence once the actual ceremony date has been confirmed. Registered individuals will be notified by email or other official communication channels when further details become available.</p>
+  <a class="btn" href="https://forms.gle/o8WcX6q45oEqRE4JA" target="_blank" rel="noopener">REGISTER YOUR INTEREST</a>
 </section>
 
-<section id="legacy">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">A legacy in the sky</div>
-      <h2>Twenty years. One proud legacy.</h2>
-      <p>A commemorative space to celebrate the people, capability and commitment behind the Sukhoi TUDM journey.</p>
-    </div>
-    <div class="grid">
-      <article class="tile"><div class="num">01</div><h3>Service</h3><p>Recognising the dedication and professionalism of personnel who contributed throughout the journey.</p></article>
-      <article class="tile"><div class="num">02</div><h3>Capability</h3><p>Celebrating the Sukhoi Su-30MKM and its place in Malaysia’s air defence story.</p></article>
-      <article class="tile"><div class="num">03</div><h3>People</h3><p>Honouring the teamwork, expertise and spirit that keep the mission moving forward.</p></article>
-    </div>
-  </div>
+<section>
+  <h2>MISSION</h2>
+  <p>TO CARRY OUT AIR OPERATION EFFECTIVELY AND EFFICIENTLY BY USING ALL AVAILABLE RESOURCES TO MEET THE RMAF OPERATIONAL READINESS REQUIREMENT AT ALL TIMES.</p>
+  <h2>VISION</h2>
+  <p>ACHIEVE AND MAINTAIN THE LEVEL OF CAPABILITY REQUIRED TO BECOME A DOMINANT FORCE.</p>
 </section>
 
-<section class="mission-vision" id="mission-vision">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Our purpose · Our ambition</div>
-      <h2>Mission &amp; Vision</h2>
-      <p>Guided by our mission and vision, committed to operational readiness and capability.</p>
-    </div>
-    <div class="mv-grid">
-      <article class="mv-card">
-        <div class="mv-label">Mission</div>
-        <h3>MISSION</h3>
-        <p>TO CARRY OUT AIR OPERATION EFFECTIVELY AND EFFICIENTLY BY USING ALL AVAILABLE RESOURCES TO MEET THE RMAF OPERATIONAL READINESS REQUIREMENT AT ALL TIMES.</p>
-      </article>
-      <article class="mv-card">
-        <div class="mv-label">Vision</div>
-        <h3>VISION</h3>
-        <p>ACHIEVE AND MAINTAIN THE LEVEL OF CAPABILITY REQUIRED TO BECOME A DOMINANT FORCE.</p>
-      </article>
-    </div>
-  </div>
+<section>
+  <h2>ANNIVERSARY TRAILER</h2>
+  <video controls preload="metadata" style="width:100%;max-width:800px;display:block;margin:auto">
+    <source src="assets/montaj_trailer.mp4" type="video/mp4">
+    Your browser does not support video playback.
+  </video>
 </section>
 
-<section id="timeline">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Milestones</div>
-      <h2>From 2007 to 2027</h2>
-      <p>Official milestone text can be updated by the organising committee.</p>
-    </div>
-    <div class="timeline">
-      <div class="year"><strong>2007</strong><h3>The beginning</h3><p>The start of the Sukhoi TUDM chapter commemorated by this anniversary.</p></div>
-      <div class="year"><strong>2017</strong><h3>A decade of service</h3><p>Ten years of experience, development and commitment.</p></div>
-      <div class="year"><strong>2027</strong><h3>20th Anniversary</h3><p>Celebrating the people and legacy behind twenty years of service.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="trailer-section" id="trailer">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Official trailer</div>
-      <h2>Twenty years in the making.</h2>
-      <p>Watch the commemorative trailer for the Sukhoi TUDM 20th Anniversary.</p>
-    </div>
-    <div class="trailer-frame">
-      <video controls preload="metadata" playsinline poster="assets/sukhoi_hero.png">
-        <source src="assets/montaj_trailer.mp4" type="video/mp4">
-        Your browser does not support embedded video. Please use a modern browser.
-      </video>
-    </div>
-    <div class="trailer-caption">
-      <span>SU-30MKM · 12 Squadron · 2007–2027</span>
-      <span>Use the play control to watch the trailer.</span>
-    </div>
-  </div>
-</section>
-
-<section id="gallery">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">In focus</div>
-      <h2>Gallery</h2>
-      <p>Featuring the supplied Sukhoi aircraft photographs and unit insignia.</p>
-    </div>
-    <div class="gallery">
-      <div class="photo">Sukhoi · Air Power</div>
-      <div class="photo">Service · Commitment</div>
-    </div>
-  </div>
-</section>
-
-<section class="rsvp" id="rsvp">
-  <div class="wrap">
-    <div class="rsvp-panel">
-      <div>
-        <div class="eyebrow">Join the celebration</div>
-        <h2 style="font-size:clamp(2rem,4vw,3.2rem);line-height:1.1">Your presence matters.</h2>
-        <p style="color:var(--muted)">Kindly confirm your attendance through the official RSVP form. Responses help the organising team coordinate guest arrangements.</p>
-        <p class="small">Please follow the organiser’s instructions when submitting attendance details.</p>
-      </div>
-      <div class="rsvp-box">
-        <div class="eyebrow">RSVP · 20th Anniversary</div>
-        <h3>Confirm your attendance</h3>
-        <p>Complete the form with your name, rank / position, unit, contact details and attendance status.</p>
-        <a class="btn" id="rsvpButton" href="#" target="_blank" rel="noopener">OPEN RSVP FORM</a>
-        <p class="small" id="rsvpNote">The official RSVP form link will be added after the Google Form is created.</p>
-      </div>
-    </div>
-  </div>
-</section>
-</main>
-
-<footer><div class="wrap">© 2027 · Sukhoi TUDM 20th Anniversary · Commemorating 2007–2027</div></footer>
-
-<script>
-const RSVP_FORM_URL = "https://forms.gle/o8WcX6q45oEqRE4JA";
-const button = document.getElementById("rsvpButton");
-const note = document.getElementById("rsvpNote");
-if (RSVP_FORM_URL.trim()) {
-  button.href = RSVP_FORM_URL;
-  note.textContent = "Your RSVP will be recorded through the official Google Form.";
-}
-
-// Live anniversary countdown (Malaysia time, UTC+8)
-(function() {
-  const target = new Date("2027-04-20T00:00:00+08:00").getTime();
-  const ids = {
-    days: document.getElementById("cd-days"),
-    hours: document.getElementById("cd-hours"),
-    minutes: document.getElementById("cd-minutes"),
-    seconds: document.getElementById("cd-seconds"),
-    message: document.getElementById("cd-message")
-  };
-  function updateCountdown() {
-    const diff = target - Date.now();
-    if (diff <= 0) {
-      ids.days.textContent = "0";
-      ids.hours.textContent = "00";
-      ids.minutes.textContent = "00";
-      ids.seconds.textContent = "00";
-      ids.message.textContent = "The anniversary date has arrived.";
-      return;
-    }
-    ids.days.textContent = Math.floor(diff / 86400000).toLocaleString("en-MY");
-    ids.hours.textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2,"0");
-    ids.minutes.textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2,"0");
-    ids.seconds.textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2,"0");
-  }
-  updateCountdown();
-  setInterval(updateCountdown,1000);
-})();
-</script>
+<footer>
+  SUKHOI Su-30MKM 20TH ANNIVERSARY · TUDM
+</footer>
 </body>
 </html>

@@ -1,4 +1,4 @@
-SUKHOI TUDM 20TH ANNIVERSARY — WEBSITE WITH TRAILER
+SUKHOI TUDM 20 ANNIVERSARY — WEBSITE WITH TRAILER
 
 Included:
 - index.html
@@ -10,7 +10,7 @@ RSVP Google Form:
 https://forms.gle/o8WcX6q45oEqRE4JA
 
 Countdown target:
-20 April 2027, Malaysia time (UTC+8).
+19 JUNE 2027, Malaysia time (UTC+8).
 
 PUBLISH:
 1. Extract this ZIP.

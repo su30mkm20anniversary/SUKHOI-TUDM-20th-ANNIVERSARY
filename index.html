@@ -4,7 +4,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Sukhoi TUDM 20 Anniversary 2027</title>
 
 <style>
@@ -39,7 +38,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(5, 18, 34, 0.97);
+  background: rgba(5,18,34,0.97);
   border-bottom: 1px solid rgba(214,180,92,0.4);
 }
 
@@ -117,7 +116,7 @@ section {
 /* HERO */
 
 .hero {
-  min-height: 720px;
+  min-height: 680px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -159,14 +158,14 @@ section {
 
 .hero h1 {
   color: var(--gold);
-  font-size: clamp(30px, 5vw, 55px);
+  font-size: clamp(30px,5vw,55px);
   line-height: 1.15;
   letter-spacing: 2px;
   text-shadow: 0 3px 10px #000;
 }
 
 .hero h2 {
-  font-size: clamp(17px, 3vw, 25px);
+  font-size: clamp(17px,3vw,25px);
   margin-top: 12px;
   letter-spacing: 3px;
 }
@@ -177,62 +176,6 @@ section {
   letter-spacing: 2px;
   font-size: 14px;
 }
-
-/* COUNTDOWN */
-
-.countdown-area {
-  margin: 38px auto 0;
-  padding: 25px 22px;
-  max-width: 760px;
-  background: rgba(4,17,32,0.82);
-  border: 1px solid var(--gold);
-  border-radius: 12px;
-  backdrop-filter: blur(5px);
-}
-
-.countdown-heading {
-  color: var(--gold);
-  font-size: 17px;
-  letter-spacing: 3px;
-  margin-bottom: 20px;
-}
-
-.countdown {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-}
-
-.countdown-item {
-  padding: 14px 8px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 8px;
-  border: 1px solid rgba(214,180,92,0.4);
-}
-
-.countdown-item span {
-  display: block;
-  font-size: clamp(25px, 5vw, 42px);
-  color: var(--gold);
-  font-weight: bold;
-  line-height: 1.2;
-}
-
-.countdown-item small {
-  display: block;
-  font-size: 11px;
-  letter-spacing: 1px;
-  margin-top: 8px;
-  color: #fff;
-}
-
-.countdown-date {
-  margin-top: 18px;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-/* BUTTON */
 
 .btn {
   display: inline-block;
@@ -280,7 +223,7 @@ section {
 
 .mv-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2,1fr);
   gap: 25px;
 }
 
@@ -310,7 +253,7 @@ section {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2,1fr);
   gap: 20px;
 }
 
@@ -354,6 +297,69 @@ section {
   color: var(--muted);
   max-width: 700px;
   margin: 0 auto 20px;
+}
+
+/* COUNTDOWN - BOTTOM SECTION */
+
+.countdown-section {
+  background:
+    linear-gradient(rgba(5,18,34,0.82),rgba(5,18,34,0.92)),
+    url("assets/sukhoi_anniversary_2.jpeg") center/cover no-repeat;
+  text-align: center;
+  padding: 75px 20px;
+}
+
+.countdown-area {
+  margin: 25px auto 0;
+  padding: 30px 22px;
+  max-width: 760px;
+  background: rgba(4,17,32,0.85);
+  border: 1px solid var(--gold);
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+}
+
+.countdown-heading {
+  color: var(--gold);
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin-bottom: 22px;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 12px;
+}
+
+.countdown-item {
+  padding: 15px 8px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 8px;
+  border: 1px solid rgba(214,180,92,0.4);
+}
+
+.countdown-item span {
+  display: block;
+  font-size: clamp(25px,5vw,42px);
+  color: var(--gold);
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.countdown-item small {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-top: 8px;
+  color: #fff;
+}
+
+.countdown-date {
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: 2px;
 }
 
 /* FOOTER */
@@ -419,7 +425,8 @@ footer p {
 
 /* MOBILE */
 
-@media(max-width: 700px) {
+@media(max-width:700px) {
+
   .navbar {
     flex-direction: column;
   }
@@ -438,8 +445,21 @@ footer p {
     background-position: center 0%;
   }
 
+  .mv-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid img {
+    height: 230px;
+  }
+
+  .section-title {
+    font-size: 25px;
+  }
+
   .countdown-area {
-    padding: 20px 12px;
+    padding: 22px 12px;
   }
 
   .countdown {
@@ -454,17 +474,8 @@ footer p {
     font-size: 9px;
   }
 
-  .mv-grid,
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-grid img {
-    height: 230px;
-  }
-
-  .section-title {
-    font-size: 25px;
+  .countdown-heading {
+    font-size: 14px;
   }
 }
 </style>
@@ -475,29 +486,28 @@ footer p {
 <!-- NAVIGATION -->
 
 <header>
-  <nav class="navbar">
+<nav class="navbar">
 
-    <div class="logo-area">
-      <img src="assets/tudm_crest.png" alt="TUDM Crest">
+  <div class="logo-area">
+    <img src="assets/tudm_crest.png" alt="TUDM Crest">
+    <img src="assets/squadron_11.png" alt="Squadron Logo">
 
-      <img src="assets/squadron_11.png" alt="Squadron Logo">
-
-      <div class="logo-text">
-        SUKHOI TUDM<br>
-        20 ANNIVERSARY
-      </div>
+    <div class="logo-text">
+      SUKHOI TUDM<br>
+      20 ANNIVERSARY
     </div>
+  </div>
 
-    <div class="nav-links">
-      <a href="#home">HOME</a>
-      <a href="#about">ABOUT</a>
-      <a href="#mission">MISSION & VISION</a>
-      <a href="#gallery">GALLERY</a>
-      <a href="#video">TRAILER</a>
-      <a href="#rsvp">RSVP</a>
-    </div>
+  <div class="nav-links">
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#mission">MISSION & VISION</a>
+    <a href="#gallery">GALLERY</a>
+    <a href="#video">TRAILER</a>
+    <a href="#rsvp">RSVP</a>
+  </div>
 
-  </nav>
+</nav>
 </header>
 
 <!-- HERO -->
@@ -512,50 +522,10 @@ footer p {
     </div>
 
     <h1>SU-30MKM</h1>
-
     <h2>20 ANNIVERSARY</h2>
 
     <p>ROYAL MALAYSIAN AIR FORCE</p>
-
     <p>2007 – 2027</p>
-
-    <!-- COUNTDOWN AT TOP -->
-
-    <div class="countdown-area">
-
-      <div class="countdown-heading">
-        COUNTDOWN TO THE CELEBRATION
-      </div>
-
-      <div class="countdown">
-
-        <div class="countdown-item">
-          <span id="days">00</span>
-          <small>DAYS</small>
-        </div>
-
-        <div class="countdown-item">
-          <span id="hours">00</span>
-          <small>HOURS</small>
-        </div>
-
-        <div class="countdown-item">
-          <span id="minutes">00</span>
-          <small>MINUTES</small>
-        </div>
-
-        <div class="countdown-item">
-          <span id="seconds">00</span>
-          <small>SECONDS</small>
-        </div>
-
-      </div>
-
-      <div class="countdown-date">
-        19 JUNE 2027
-      </div>
-
-    </div>
 
     <div style="margin-top:25px;">
       <a href="#rsvp" class="btn">REGISTER YOUR INTEREST</a>
@@ -573,7 +543,6 @@ footer p {
   <div class="container">
 
     <h2 class="section-title">ABOUT US</h2>
-
     <div class="gold-line"></div>
 
     <div class="about-content">
@@ -607,33 +576,26 @@ footer p {
   <div class="container">
 
     <h2 class="section-title">MISSION & VISION</h2>
-
     <div class="gold-line"></div>
 
     <div class="mv-grid">
 
       <div class="mv-card">
-
         <h3>OUR MISSION</h3>
-
         <p>
           To uphold operational excellence, professionalism
           and commitment in ensuring the highest standards
           of aircraft readiness and mission effectiveness.
         </p>
-
       </div>
 
       <div class="mv-card">
-
         <h3>OUR VISION</h3>
-
         <p>
           To preserve the Sukhoi legacy through continuous
           improvement, teamwork and dedication towards
           the future of the Royal Malaysian Air Force.
         </p>
-
       </div>
 
     </div>
@@ -649,7 +611,6 @@ footer p {
   <div class="container">
 
     <h2 class="section-title">GALLERY</h2>
-
     <div class="gold-line"></div>
 
     <div class="gallery-grid">
@@ -691,18 +652,11 @@ footer p {
   <div class="container">
 
     <h2 class="section-title">ANNIVERSARY TRAILER</h2>
-
     <div class="gold-line"></div>
 
     <video controls preload="metadata">
-
-      <source
-        src="assets/montaj_trailer.mp4"
-        type="video/mp4"
-      >
-
+      <source src="assets/montaj_trailer.mp4" type="video/mp4">
       Your browser does not support the video.
-
     </video>
 
   </div>
@@ -716,7 +670,6 @@ footer p {
   <div class="container">
 
     <h2 class="section-title">ANNIVERSARY RSVP</h2>
-
     <div class="gold-line"></div>
 
     <p>
@@ -738,18 +691,63 @@ footer p {
 
 </section>
 
+<!-- COUNTDOWN - BOTTOM -->
+
+<section class="countdown-section" id="countdown">
+
+  <div class="container">
+
+    <h2 class="section-title">20 ANNIVERSARY</h2>
+    <div class="gold-line"></div>
+
+    <div class="countdown-area">
+
+      <div class="countdown-heading">
+        COUNTDOWN TO THE CELEBRATION
+      </div>
+
+      <div class="countdown">
+
+        <div class="countdown-item">
+          <span id="days">00</span>
+          <small>DAYS</small>
+        </div>
+
+        <div class="countdown-item">
+          <span id="hours">00</span>
+          <small>HOURS</small>
+        </div>
+
+        <div class="countdown-item">
+          <span id="minutes">00</span>
+          <small>MINUTES</small>
+        </div>
+
+        <div class="countdown-item">
+          <span id="seconds">00</span>
+          <small>SECONDS</small>
+        </div>
+
+      </div>
+
+      <div class="countdown-date">
+        19 JUNE 2027
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
 <!-- FOOTER -->
 
 <footer>
 
   <div class="footer-logos">
-
     <img src="assets/tudm_crest.png" alt="TUDM Crest">
-
     <img src="assets/squadron_11.png" alt="Squadron Logo">
-
     <img src="assets/squadron_badge.png" alt="Squadron Badge">
-
   </div>
 
   <p class="footer-highlight">
@@ -757,7 +755,6 @@ footer p {
   </p>
 
   <p>2007 – 2027</p>
-
   <p>Royal Malaysian Air Force</p>
 
   <p style="margin-top:12px;">
@@ -768,14 +765,9 @@ footer p {
 
 <!-- IMAGE LIGHTBOX -->
 
-<div
-  class="lightbox"
-  id="lightbox"
-  onclick="closeLightbox()"
->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
 
   <span class="lightbox-close">&times;</span>
-
   <img id="lightbox-image" src="" alt="Gallery Image">
 
 </div>
@@ -792,7 +784,6 @@ const anniversaryDate =
 function updateCountdown() {
 
   const now = new Date().getTime();
-
   const distance = anniversaryDate - now;
 
   if (distance <= 0) {
@@ -835,11 +826,9 @@ function updateCountdown() {
 
   document.getElementById("seconds").textContent =
     String(seconds).padStart(2, "0");
-
 }
 
 updateCountdown();
-
 setInterval(updateCountdown, 1000);
 
 
@@ -852,14 +841,12 @@ function openLightbox(imageSource) {
 
   document.getElementById("lightbox").style.display =
     "flex";
-
 }
 
 function closeLightbox() {
 
   document.getElementById("lightbox").style.display =
     "none";
-
 }
 
 </script>

@@ -1,8 +1,11 @@
-
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Sukhoi TUDM 20 Anniversary | 2007–2027</title>
@@ -10,833 +13,1129 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Orbitron:wght@500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
 :root {
+
 --navy:#071525;
+
 --navy2:#0c2238;
+
 --gold:#d6b46a;
+
 --gold-light:#f2d99b;
+
 --white:#f5f5f5;
+
 --muted:#aeb9c5;
+
 }
 
 * {
+
 margin:0;
+
 padding:0;
+
 box-sizing:border-box;
+
 scroll-behavior:smooth;
+
 }
 
 body {
+
 background:var(--navy);
+
 color:var(--white);
+
 font-family:'Montserrat',sans-serif;
+
 overflow-x:hidden;
+
 }
 
 a {
+
 color:inherit;
+
 text-decoration:none;
+
 }
 
 section {
+
 padding:90px 8%;
+
 scroll-margin-top:85px;
+
 }
 
 .section-title {
+
 text-align:center;
+
 margin-bottom:45px;
+
 }
 
 .section-title span {
+
 color:var(--gold);
+
 font-size:12px;
+
 letter-spacing:4px;
+
 font-weight:700;
+
 }
 
 .section-title h2 {
+
 font-family:'Orbitron',sans-serif;
+
 font-size:clamp(25px,4vw,38px);
+
 margin-top:13px;
+
 }
 
 .section-title p {
+
 color:var(--muted);
+
 margin-top:12px;
+
 line-height:1.7;
+
 }
 
 .gold-line {
+
 width:65px;
+
 height:3px;
+
 background:var(--gold);
+
 margin:18px auto;
+
 }
 
 /* NAVIGATION */
 
 header {
+
 position:fixed;
+
 top:0;
+
 left:0;
+
 width:100%;
+
 z-index:1000;
+
 background:rgba(5,17,30,.96);
+
 backdrop-filter:blur(12px);
+
 border-bottom:1px solid rgba(214,180,106,.25);
+
 }
 
 .navbar {
+
 min-height:75px;
+
 padding:10px 5%;
+
 display:flex;
+
 align-items:center;
+
 justify-content:space-between;
+
 gap:20px;
+
 }
 
 .brand {
+
 display:flex;
+
 align-items:center;
+
 gap:10px;
+
 }
 
 .brand img {
+
 width:40px;
+
 height:40px;
+
 object-fit:contain;
+
 }
 
 .brand-text strong {
+
 display:block;
+
 font-family:'Orbitron',sans-serif;
+
 font-size:12px;
+
 color:var(--gold);
+
 }
 
 .brand-text small {
+
 font-size:9px;
+
 letter-spacing:2px;
+
 color:var(--muted);
+
 }
 
 .nav-links {
+
 display:flex;
+
 align-items:center;
+
 gap:18px;
+
 }
 
 .nav-links a {
+
 font-size:10px;
+
 font-weight:700;
+
 letter-spacing:1px;
+
 color:#dce2e8;
+
 transition:.3s;
+
 }
 
 .nav-links a:hover {
+
 color:var(--gold);
+
 }
 
 .menu-btn {
+
 display:none;
+
 background:none;
+
 border:1px solid var(--gold);
+
 color:var(--gold);
+
 padding:8px 12px;
+
 cursor:pointer;
+
 }
 
 /* HERO */
 
 .hero {
+
 min-height: 680px;
+
 display: flex;
+
 align-items: center;
+
 justify-content: center;
+
 text-align: center;
+
 position: relative;
+
 padding: 65px 20px;
 
 background-image:
+
 linear-gradient(rgba(3,15,29,0.48), rgba(3,15,29,0.82)),
+
 url("assets/background_sukhoi.jpeg");
 
 background-size: cover;
-  background-position: center 20pax;
-  background-position: center 0%;
+
+  background-position: 
+
+  background-position: center 0%;
+
 background-repeat: no-repeat;
+
 }
 
 .hero-content {
+
 max-width:900px;
+
 animation:fadeUp 1.2s ease;
+
 }
 
 .hero-tag {
+
 color:var(--gold-light);
+
 letter-spacing:5px;
+
 font-size:12px;
+
 font-weight:700;
+
 margin-bottom:22px;
+
 }
 
 .hero h1 {
+
 font-family:'Orbitron',sans-serif;
+
 font-size:clamp(38px,7vw,76px);
+
 line-height:1.12;
+
 text-shadow:0 5px 25px #000;
+
 }
 
 .hero h1 span {
+
 color:var(--gold);
+
 }
 
 .hero p {
+
 margin:22px auto 32px;
+
 max-width:650px;
+
 line-height:1.8;
+
 color:#f0f0f0;
+
 font-size:14px;
+
 }
 
 .btn {
+
 display:inline-block;
+
 padding:15px 28px;
+
 background:var(--gold);
+
 color:#101a25;
+
 font-size:11px;
+
 font-weight:800;
+
 letter-spacing:1.5px;
+
 border:1px solid var(--gold);
+
 transition:.3s;
+
 }
 
 .btn:hover {
+
 background:transparent;
+
 color:var(--gold);
+
 transform:translateY(-3px);
+
 }
 
 .btn-outline {
+
 background:transparent;
+
 color:var(--gold);
+
 margin-left:10px;
+
 }
 
 .hero-bottom {
+
 position:absolute;
+
 bottom:25px;
+
 left:0;
+
 width:100%;
+
 color:var(--gold-light);
+
 font-size:10px;
+
 letter-spacing:4px;
+
 }
 
 /* ABOUT */
 
 .about-grid {
+
 display:grid;
+
 grid-template-columns:1.1fr .9fr;
+
 gap:45px;
+
 align-items:center;
+
 }
 
 .about-image img {
+
 width:100%;
+
 border:1px solid rgba(214,180,106,.4);
+
 box-shadow:15px 15px 0 rgba(214,180,106,.1);
+
 }
 
 .about-text h3 {
+
 font-family:'Orbitron',sans-serif;
+
 font-size:22px;
+
 color:var(--gold);
+
 margin-bottom:20px;
+
 }
 
 .about-text p {
+
 color:var(--muted);
+
 font-size:14px;
+
 line-height:1.9;
+
 margin-bottom:15px;
+
 }
 
 /* MISSION VISION */
 
 .mission-section {
+
 background:linear-gradient(135deg,#0b2034,#071525);
+
 }
 
 .mv-grid {
+
 display:grid;
+
 grid-template-columns:repeat(2,1fr);
+
 gap:25px;
+
 }
 
 .mv-card {
+
 border:1px solid rgba(214,180,106,.3);
+
 padding:35px;
+
 background:rgba(255,255,255,.025);
+
 transition:.3s;
+
 }
 
 .mv-card:hover {
+
 transform:translateY(-7px);
+
 border-color:var(--gold);
+
 }
 
 .mv-card .number {
+
 font-family:'Orbitron',sans-serif;
+
 font-size:35px;
+
 color:var(--gold);
+
 margin-bottom:18px;
+
 }
 
 .mv-card h3 {
+
 font-size:18px;
+
 letter-spacing:2px;
+
 margin-bottom:15px;
+
 }
 
 .mv-card p {
+
 color:var(--muted);
+
 line-height:1.8;
+
 font-size:13px;
+
 }
 
 /* TIMELINE */
 
 .timeline-section {
+
 background:#081a2b;
+
 }
 
 .timeline {
+
 max-width:850px;
+
 margin:auto;
+
 position:relative;
+
 }
 
 .timeline::before {
+
 content:"";
+
 position:absolute;
+
 left:50%;
+
 top:0;
+
 bottom:0;
+
 width:2px;
+
 background:var(--gold);
+
 transform:translateX(-50%);
+
 }
 
 .timeline-item {
+
 width:50%;
+
 padding:20px 35px;
+
 position:relative;
+
 }
 
 .timeline-item:nth-child(odd) {
+
 left:0;
+
 text-align:right;
+
 }
 
 .timeline-item:nth-child(even) {
+
 left:50%;
+
 }
 
 .timeline-item::after {
+
 content:"";
+
 position:absolute;
+
 top:30px;
+
 width:13px;
+
 height:13px;
+
 border-radius:50%;
+
 background:var(--gold);
+
 border:4px solid var(--navy);
+
 box-shadow:0 0 0 2px var(--gold);
+
 }
 
 .timeline-item:nth-child(odd)::after {
+
 right:-7px;
+
 }
 
 .timeline-item:nth-child(even)::after {
+
 left:-7px;
+
 }
 
 .timeline-card {
+
 background:#102940;
+
 border:1px solid rgba(214,180,106,.3);
+
 padding:23px;
+
 border-radius:5px;
+
 }
 
 .timeline-card h3 {
+
 font-family:'Orbitron',sans-serif;
+
 color:var(--gold);
+
 font-size:23px;
+
 margin-bottom:10px;
+
 }
 
 .timeline-card p {
+
 color:var(--muted);
+
 font-size:12px;
+
 line-height:1.7;
+
 }
 
 /* AIRCRAFT */
 
 .aircraft-section {
+
 background:linear-gradient(180deg,#071525,#0d263d);
+
 }
 
 .aircraft-image {
+
 max-width:1000px;
+
 margin:auto;
+
 }
 
 .aircraft-image img {
+
 width:100%;
+
 display:block;
+
 border:1px solid rgba(214,180,106,.3);
+
 }
 
 .aircraft-caption {
+
 text-align:center;
+
 margin-top:25px;
+
 }
 
 .aircraft-caption h3 {
+
 color:var(--gold);
+
 font-family:'Orbitron',sans-serif;
+
 font-size:23px;
+
 margin-bottom:12px;
+
 }
 
 .aircraft-caption p {
+
 max-width:700px;
+
 margin:auto;
+
 color:var(--muted);
+
 font-size:13px;
+
 line-height:1.8;
+
 }
 
 /* BEHIND THE MISSION */
 
 .team-grid {
+
 display:grid;
+
 grid-template-columns:repeat(3,1fr);
+
 gap:20px;
+
 }
 
 .team-card {
+
 background:#102940;
+
 padding:30px 20px;
+
 text-align:center;
+
 border-bottom:3px solid var(--gold);
+
 transition:.3s;
+
 }
 
 .team-card:hover {
+
 transform:translateY(-6px);
+
 }
 
 .team-icon {
+
 font-size:35px;
+
 margin-bottom:18px;
+
 }
 
 .team-card h3 {
+
 color:var(--gold);
+
 font-size:15px;
+
 margin-bottom:12px;
+
 }
 
 .team-card p {
+
 color:var(--muted);
+
 font-size:12px;
+
 line-height:1.7;
+
 }
 
 /* GALLERY */
 
 .gallery-section {
+
 background:#0b2034;
+
 }
 
 .gallery-grid {
+
 display:grid;
+
 grid-template-columns:repeat(2,1fr);
+
 gap:20px;
+
 }
 
 .gallery-item {
+
 overflow:hidden;
+
 position:relative;
+
 border:1px solid rgba(214,180,106,.3);
+
 cursor:pointer;
+
 }
 
 .gallery-item img {
+
 width:100%;
+
 height:300px;
+
 object-fit:cover;
+
 display:block;
+
 transition:.5s;
+
 }
 
 .gallery-item:hover img {
+
 transform:scale(1.07);
+
 }
 
 .gallery-label {
+
 position:absolute;
+
 bottom:0;
+
 left:0;
+
 width:100%;
+
 padding:20px;
+
 background:linear-gradient(transparent,rgba(0,0,0,.9));
+
 color:var(--gold-light);
+
 font-weight:700;
+
 font-size:12px;
+
 letter-spacing:2px;
+
 }
 
 /* LIGHTBOX */
 
 .lightbox {
+
 display:none;
+
 position:fixed;
+
 inset:0;
+
 background:rgba(0,0,0,.94);
+
 z-index:2000;
+
 align-items:center;
+
 justify-content:center;
+
 padding:25px;
+
 }
 
 .lightbox img {
+
 max-width:95%;
+
 max-height:85vh;
+
 object-fit:contain;
+
 }
 
 .lightbox-close {
+
 position:absolute;
+
 top:20px;
+
 right:30px;
+
 font-size:40px;
+
 color:white;
+
 cursor:pointer;
+
 }
 
 /* VIDEO */
 
 .video-section {
+
 background:#071525;
+
 }
 
 .video-container {
+
 max-width:900px;
+
 margin:auto;
+
 border:1px solid rgba(214,180,106,.4);
+
 box-shadow:0 15px 50px rgba(0,0,0,.4);
+
 }
 
 .video-container video {
+
 width:100%;
+
 display:block;
+
 background:#000;
+
 }
 
 /* COUNTDOWN */
 
 .countdown-section {
+
 text-align:center;
+
 background:
+
 linear-gradient(rgba(4,16,29,.85),rgba(4,16,29,.92)),
+
 url("assets/sukhoi_anniversary_2.jpeg") center/cover no-repeat;
+
 background-attachment:fixed;
+
 }
 
 .countdown {
+
 display:flex;
+
 justify-content:center;
+
 flex-wrap:wrap;
+
 gap:18px;
+
 margin:40px 0;
+
 }
 
 .count-box {
+
 min-width:110px;
+
 padding:25px 15px;
+
 background:rgba(7,21,37,.8);
+
 border:1px solid var(--gold);
+
 }
 
 .count-box strong {
+
 display:block;
+
 font-family:'Orbitron',sans-serif;
+
 color:var(--gold);
+
 font-size:35px;
+
 }
 
 .count-box span {
+
 display:block;
+
 margin-top:10px;
+
 font-size:10px;
+
 letter-spacing:2px;
+
 color:var(--muted);
+
 }
 
 .countdown-note {
+
 color:var(--muted);
+
 font-size:12px;
+
 }
 
 /* ANNIVERSARY REGISTER */
 
 .register-section {
+
 text-align:center;
+
 background:linear-gradient(135deg,#102940,#071525);
+
 }
 
 .register-content {
+
 max-width:750px;
+
 margin:auto;
+
 border:1px solid rgba(214,180,106,.4);
+
 padding:50px 25px;
+
 background:rgba(255,255,255,.025);
+
 }
 
 .register-content h2 {
+
 font-family:'Orbitron',sans-serif;
+
 color:var(--gold);
+
 font-size:clamp(24px,4vw,35px);
+
 margin-bottom:20px;
+
 }
 
 .register-content p {
+
 color:var(--muted);
+
 line-height:1.8;
+
 font-size:13px;
+
 margin-bottom:25px;
-}
 
-/* CLUTCH BAG PROMOTION */
-
-.bashi-section {
-padding:100px 7%;
-background:
-radial-gradient(circle at top right,#193653 0%,transparent 40%),
-linear-gradient(135deg,#071525,#0b2034);
-position:relative;
-overflow:hidden;
-}
-
-.bashi-container {
-max-width:1150px;
-margin:auto;
-}
-
-.bashi-heading {
-text-align:center;
-margin-bottom:40px;
-}
-
-.bashi-heading span {
-color:var(--gold);
-letter-spacing:4px;
-font-size:11px;
-font-weight:800;
-}
-
-.bashi-heading h2 {
-font-family:'Orbitron',sans-serif;
-font-size:clamp(28px,5vw,45px);
-margin:15px 0;
-color:#fff;
-}
-
-.bashi-heading p {
-color:var(--muted);
-font-size:13px;
-line-height:1.8;
-}
-
-.bashi-showcase {
-background:#fff;
-border-radius:18px;
-overflow:hidden;
-box-shadow:0 25px 65px rgba(0,0,0,.4);
-border:1px solid rgba(214,180,106,.5);
-transition:.4s;
-}
-
-.bashi-showcase:hover {
-transform:translateY(-6px);
-box-shadow:0 30px 75px rgba(0,0,0,.55);
-}
-
-.bashi-showcase > img {
-width:100%;
-display:block;
-}
-
-.bashi-details {
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:35px;
-padding:35px;
-background:#0c2238;
-}
-
-.bashi-info h3 {
-font-family:'Orbitron',sans-serif;
-color:var(--gold);
-font-size:22px;
-margin-bottom:15px;
-}
-
-.bashi-info p {
-color:#bdc8d2;
-font-size:13px;
-line-height:1.9;
-margin-bottom:12px;
-}
-
-.bashi-features {
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:14px;
-margin-top:20px;
-}
-
-.bashi-feature {
-padding:15px;
-background:rgba(255,255,255,.05);
-border:1px solid rgba(214,180,106,.2);
-border-radius:8px;
-color:#fff;
-font-size:11px;
-line-height:1.6;
-}
-
-.bashi-feature span {
-display:block;
-color:var(--gold);
-font-size:20px;
-margin-bottom:7px;
-}
-
-.bashi-cta {
-background:linear-gradient(135deg,#172f47,#071525);
-border:1px solid var(--gold);
-border-radius:12px;
-padding:25px;
-text-align:center;
-align-self:center;
-}
-
-.bashi-cta h3 {
-color:var(--gold-light);
-font-family:'Orbitron',sans-serif;
-font-size:19px;
-margin-bottom:12px;
-}
-
-.bashi-cta p {
-color:#c4cfda;
-font-size:12px;
-line-height:1.8;
-margin-bottom:20px;
-}
-
-.bashi-button {
-display:inline-block;
-padding:15px 25px;
-background:var(--gold);
-color:#071525;
-border-radius:5px;
-font-weight:800;
-font-size:11px;
-letter-spacing:1px;
-transition:.3s;
-}
-
-.bashi-button:hover {
-background:var(--gold-light);
-transform:translateY(-3px);
-}
-
-.bashi-note {
-color:var(--muted);
-text-align:center;
-font-size:10px;
-margin-top:20px;
 }
 
 /* FOOTER */
 
 footer {
+
 padding:35px 5%;
+
 background:#040d17;
+
 text-align:center;
+
 border-top:1px solid rgba(214,180,106,.25);
+
 }
 
 .footer-logos {
+
 display:flex;
+
 justify-content:center;
+
 align-items:center;
+
 gap:30px;
+
 margin-bottom:20px;
+
 }
 
 .footer-logos img {
+
 width:48px;
+
 height:48px;
+
 object-fit:contain;
+
 }
 
 footer p {
+
 color:var(--muted);
+
 font-size:10px;
+
 line-height:1.8;
+
 }
 
 footer strong {
+
 color:var(--gold);
+
 }
 
 /* ANIMATIONS */
 
 @keyframes fadeUp {
+
 from {opacity:0;transform:translateY(25px);}
+
 to {opacity:1;transform:translateY(0);}
+
 }
 
 .reveal {
+
 opacity:0;
+
 transform:translateY(30px);
+
 transition:all .8s ease;
+
 }
 
 .reveal.active {
+
 opacity:1;
+
 transform:translateY(0);
+
 }
 
 /* RESPONSIVE */
 
 @media(max-width:900px) {
+
 .nav-links {gap:12px;}
+
 .nav-links a {font-size:9px;}
+
 .about-grid {grid-template-columns:1fr;}
+
 }
 
 @media(max-width:700px) {
+
 section {padding:70px 6%;}
 
 .navbar {min-height:68px;}
@@ -844,68 +1143,107 @@ section {padding:70px 6%;}
 .menu-btn {display:block;}
 
 .nav-links {
+
 display:none;
+
 position:absolute;
+
 top:68px;
+
 left:0;
+
 width:100%;
+
 background:#071525;
+
 flex-direction:column;
+
 padding:25px;
+
 border-bottom:1px solid var(--gold);
+
 }
 
 .nav-links.show {display:flex;}
 
 .nav-links a {
+
 font-size:11px;
+
 padding:8px;
+
 }
 
 .brand img {
+
 width:32px;
+
 height:32px;
+
 }
 
 .brand-text strong {font-size:10px;}
+
 .brand-text small {font-size:8px;}
 
 .hero {min-height:85vh;}
 
 .hero-bottom {
+
 font-size:8px;
+
 letter-spacing:2px;
+
 }
 
 .mv-grid,
+
 .gallery-grid,
+
 .team-grid {
+
 grid-template-columns:1fr;
+
 }
 
 .timeline::before {left:8px;}
 
 .timeline-item,
+
 .timeline-item:nth-child(even),
+
 .timeline-item:nth-child(odd) {
+
 width:100%;
+
 left:0;
+
 text-align:left;
+
 padding:15px 10px 15px 30px;
+
 }
 
 .timeline-item:nth-child(odd)::after,
+
 .timeline-item:nth-child(even)::after {
+
 left:1px;
+
 right:auto;
+
 }
 
 .count-box {
+
 min-width:75px;
+
 padding:18px 10px;
+
 }
 
 .count-box strong {font-size:25px;}
+
 .count-box span {font-size:8px;}
 
 .gallery-item img {height:230px;}
@@ -914,115 +1252,157 @@ padding:18px 10px;
 
 .countdown-section {background-attachment:scroll;}
 
-.bashi-section {padding:70px 5%;}
-
-.bashi-details {
-grid-template-columns:1fr;
-padding:22px;
 }
 
-.bashi-features {
-grid-template-columns:1fr 1fr;
-}
-}
 </style>
+
 </head>
 
 <body>
 
 <header>
+
 <nav class="navbar">
 
 <a href="#home" class="brand">
+
 <img src="assets/tudm_crest.png" alt="TUDM Crest">
+
 <img src="assets/squadron_11.png" alt="11 Squadron">
+
 <img src="assets/squadron_badge.png" alt="12 Squadron">
 
 <div class="brand-text">
+
 <strong>SU-30MKM</strong>
+
 <small>20 ANNIVERSARY</small>
+
 </div>
+
 </a>
 
 <button class="menu-btn" onclick="toggleMenu()">MENU ☰</button>
 
 <div class="nav-links" id="navLinks">
+
 <a href="#home" onclick="closeMenu()">HOME</a>
+
 <a href="#about" onclick="closeMenu()">ABOUT</a>
+
 <a href="#journey" onclick="closeMenu()">OUR JOURNEY</a>
+
 <a href="#aircraft" onclick="closeMenu()">THE FLANKER</a>
+
 <a href="#gallery" onclick="closeMenu()">GALLERY</a>
+
 <a href="#trailer" onclick="closeMenu()">TRAILER</a>
-<a href="#bashi" onclick="closeMenu()">CLUTCH BAG</a>
 <a href="#register" onclick="closeMenu()">RSVP</a>
+
 </div>
 
 </nav>
+
 </header>
 
 <!-- HERO -->
 
 <section class="hero" id="home">
+
 <div class="hero-content">
+
 <div class="hero-tag">ROYAL MALAYSIAN AIR FORCE</div>
 
 <h1>20 YEARS OF<br><span>EXCELLENCE</span></h1>
 
 <p>
+
 Celebrating two decades of the Sukhoi Su-30MKM
+
 in the service of the Royal Malaysian Air Force.
+
 A legacy of dedication, commitment and excellence.
+
 </p>
 
 <a href="#register" class="btn">REGISTER YOUR INTEREST</a>
+
 <a href="#about" class="btn btn-outline">EXPLORE MORE</a>
+
 </div>
 
 <div class="hero-bottom">
+
 2007 — 2027 | SU-30MKM ANNIVERSARY
+
 </div>
+
 </section>
 
 <!-- ABOUT -->
 
 <section id="about">
+
 <div class="section-title reveal">
+
 <span>OUR LEGACY</span>
+
 <h2>ABOUT THE ANNIVERSARY</h2>
+
 <div class="gold-line"></div>
+
 <p>Two decades of service, dedication and excellence.</p>
+
 </div>
 
 <div class="about-grid reveal">
 
 <div class="about-image">
+
 <img src="assets/sukhoi_hero.png" alt="Sukhoi Su-30MKM">
+
 </div>
 
 <div class="about-text">
+
 <h3>20 YEARS OF SU-30MKM</h3>
 
 <p>
+
 The Sukhoi Su-30MKM has been an important part
+
 of the Royal Malaysian Air Force's air combat
+
 capability since its introduction in 2007.
+
 </p>
 
 <p>
+
 The 20 Anniversary commemorates the journey,
+
 achievements and contributions of all personnel
+
 involved in supporting and operating this
+
 distinguished aircraft.
+
 </p>
 
 <p>
+
 More than an aircraft, this anniversary
+
 represents the dedication, teamwork and
+
 professionalism of the people behind the mission.
+
 </p>
+
 </div>
 
 </div>
+
 </section>
 
 <!-- MISSION & VISION -->
@@ -1030,34 +1410,55 @@ professionalism of the people behind the mission.
 <section class="mission-section">
 
 <div class="section-title reveal">
+
 <span>OUR PURPOSE</span>
+
 <h2>MISSION & VISION</h2>
+
 <div class="gold-line"></div>
+
 </div>
 
 <div class="mv-grid reveal">
 
 <div class="mv-card">
+
 <div class="number">01</div>
+
 <h3>OUR MISSION</h3>
+
 <p>
+
 To commemorate 20 years of the Sukhoi Su-30MKM
+
 in TUDM service while recognising the dedication,
+
 commitment and contributions of all personnel.
+
 </p>
+
 </div>
 
 <div class="mv-card">
+
 <div class="number">02</div>
+
 <h3>OUR VISION</h3>
+
 <p>
+
 To preserve the legacy of the Su-30MKM and
+
 celebrate its contribution as part of the
+
 Royal Malaysian Air Force's aviation history.
+
 </p>
+
 </div>
 
 </div>
+
 </section>
 
 <!-- TIMELINE -->
@@ -1065,56 +1466,93 @@ Royal Malaysian Air Force's aviation history.
 <section class="timeline-section" id="journey">
 
 <div class="section-title reveal">
+
 <span>THE JOURNEY</span>
+
 <h2>2007 — 2027</h2>
+
 <div class="gold-line"></div>
+
 <p>A twenty-year journey. One enduring legacy.</p>
+
 </div>
 
 <div class="timeline reveal">
 
 <div class="timeline-item">
+
 <div class="timeline-card">
+
 <h3>2007</h3>
+
 <p>
+
 The beginning of the Su-30MKM era in
+
 the Royal Malaysian Air Force.
+
 </p>
+
 </div>
+
 </div>
 
 <div class="timeline-item">
+
 <div class="timeline-card">
+
 <h3>2012</h3>
+
 <p>Insert verified historical milestone here.</p>
+
 </div>
+
 </div>
 
 <div class="timeline-item">
+
 <div class="timeline-card">
+
 <h3>2017</h3>
+
 <p>Insert verified historical milestone here.</p>
+
 </div>
+
 </div>
 
 <div class="timeline-item">
+
 <div class="timeline-card">
+
 <h3>2022</h3>
+
 <p>Insert verified historical milestone here.</p>
+
 </div>
+
 </div>
 
 <div class="timeline-item">
+
 <div class="timeline-card">
+
 <h3>2027</h3>
+
 <p>
+
 Celebrating 20 years of the Su-30MKM
+
 in TUDM service.
+
 </p>
-</div>
+
 </div>
 
 </div>
+
+</div>
+
 </section>
 
 <!-- AIRCRAFT -->
@@ -1122,24 +1560,39 @@ in TUDM service.
 <section class="aircraft-section" id="aircraft">
 
 <div class="section-title reveal">
+
 <span>THE LEGEND</span>
+
 <h2>THE FLANKER</h2>
+
 <div class="gold-line"></div>
+
 <p>Introducing the Sukhoi Su-30MKM.</p>
+
 </div>
 
 <div class="aircraft-image reveal">
+
 <img src="assets/sukhoi_airshow.jpeg" alt="Sukhoi Su-30MKM Airshow">
+
 </div>
 
 <div class="aircraft-caption reveal">
+
 <h3>SUKHOI SU-30MKM</h3>
+
 <p>
+
 A distinguished aircraft in the Royal Malaysian
+
 Air Force, representing the dedication and
+
 professionalism of the personnel who operate,
+
 maintain and support the platform.
+
 </p>
+
 </div>
 
 </section>
@@ -1149,42 +1602,69 @@ maintain and support the platform.
 <section>
 
 <div class="section-title reveal">
+
 <span>THE PEOPLE</span>
+
 <h2>BEHIND THE MISSION</h2>
+
 <div class="gold-line"></div>
+
 <p>Every successful mission is supported by dedicated people.</p>
+
 </div>
 
 <div class="team-grid reveal">
 
 <div class="team-card">
+
 <div class="team-icon">✈</div>
+
 <h3>AIRCREW</h3>
+
 <p>
+
 The people entrusted with operating
+
 the aircraft and carrying out assigned missions.
+
 </p>
+
 </div>
 
 <div class="team-card">
+
 <div class="team-icon">⚙</div>
+
 <h3>ENGINEERING</h3>
+
 <p>
+
 The technical personnel whose expertise
+
 and commitment support aircraft readiness.
+
 </p>
+
 </div>
 
 <div class="team-card">
+
 <div class="team-icon">★</div>
+
 <h3>SUPPORT TEAM</h3>
+
 <p>
+
 The dedicated personnel working behind
+
 the scenes to support the mission.
+
 </p>
+
 </div>
 
 </div>
+
 </section>
 
 <!-- GALLERY -->
@@ -1192,30 +1672,45 @@ the scenes to support the mission.
 <section class="gallery-section" id="gallery">
 
 <div class="section-title reveal">
+
 <span>OUR MEMORIES</span>
+
 <h2>GALLERY</h2>
+
 <div class="gold-line"></div>
+
 <p>A collection of moments from the Su-30MKM journey.</p>
+
 </div>
 
 <div class="gallery-grid reveal">
 
 <div class="gallery-item" onclick="openImage(this)">
+
 <img src="assets/sukhoi_hero.png" alt="Su-30MKM">
+
 <div class="gallery-label">THE FLANKER</div>
+
 </div>
 
 <div class="gallery-item" onclick="openImage(this)">
+
 <img src="assets/sukhoi_airshow.jpeg" alt="Su-30MKM Airshow">
+
 <div class="gallery-label">AIRSHOW</div>
+
 </div>
 
 </div>
+
 </section>
 
 <div class="lightbox" id="lightbox" onclick="closeImage()">
+
 <span class="lightbox-close">&times;</span>
+
 <img id="lightboxImage" src="" alt="Gallery image">
+
 </div>
 
 <!-- TRAILER -->
@@ -1223,17 +1718,27 @@ the scenes to support the mission.
 <section class="video-section" id="trailer">
 
 <div class="section-title reveal">
+
 <span>THE STORY</span>
+
 <h2>ANNIVERSARY TRAILER</h2>
+
 <div class="gold-line"></div>
+
 <p>Twenty years. One legacy. A story worth remembering.</p>
+
 </div>
 
 <div class="video-container reveal">
+
 <video controls preload="metadata" playsinline>
+
 <source src="assets/montaj_trailer.mp4" type="video/mp4">
+
 Your browser does not support HTML video.
+
 </video>
+
 </div>
 
 </section>
@@ -1243,158 +1748,58 @@ Your browser does not support HTML video.
 <section class="countdown-section" id="countdown">
 
 <div class="section-title reveal">
+
 <span>THE CELEBRATION</span>
+
 <h2>COUNTDOWN TO 20 YEARS</h2>
+
 <div class="gold-line"></div>
+
 <p>19 June 2027</p>
+
 </div>
 
 <div class="countdown reveal">
 
 <div class="count-box">
+
 <strong id="days">000</strong>
+
 <span>DAYS</span>
+
 </div>
 
 <div class="count-box">
+
 <strong id="hours">00</strong>
+
 <span>HOURS</span>
+
 </div>
 
 <div class="count-box">
+
 <strong id="minutes">00</strong>
+
 <span>MINUTES</span>
+
 </div>
 
 <div class="count-box">
+
 <strong id="seconds">00</strong>
+
 <span>SECONDS</span>
+
 </div>
 
 </div>
 
 <p class="countdown-note">
+
 Counting down to the 20 Anniversary milestone.
+
 </p>
-
-</section>
-
-<!-- CLUTCH BAG PROMOTION -->
-
-<section class="bashi-section" id="bashi">
-
-<div class="bashi-container">
-
-<div class="bashi-heading reveal">
-<span>EXCLUSIVE PRODUCT</span>
-<h2>PERSONALISED CLUTCH BAG</h2>
-<div class="gold-line"></div>
-
-<p>
-Your Style. Your Name. Your Clutch Bag.<br>
-A personal touch that makes your bag uniquely yours.
-</p>
-</div>
-
-<div class="bashi-showcase reveal">
-
-<!-- ORIGINAL PRODUCT SHOWCASE IMAGE -->
-<img
-src="assets/bashi_showcase.png"
-alt="Personalised Clutch Bag"
-loading="lazy"
->
-
-<div class="bashi-details">
-
-<div class="bashi-info">
-
-<h3>MAKE IT PERSONAL</h3>
-
-<p>
-Looking for a stylish and practical clutch bag?
-Make it uniquely yours with personalised
-name embroidery.
-</p>
-
-<p>
-The name displayed on the product image is
-only an example. Customers may choose their
-own preferred name to be embroidered on the bag.
-</p>
-
-<p>
-A thoughtful personal accessory, perfect for
-everyday use or as a memorable keepsake.
-</p>
-
-<div class="bashi-features">
-
-<div class="bashi-feature">
-<span>✦</span>
-Personalised Name
-</div>
-
-<div class="bashi-feature">
-<span>✎</span>
-Custom Name Embroidery
-</div>
-
-<div class="bashi-feature">
-<span>◇</span>
-Stylish Design
-</div>
-
-<div class="bashi-feature">
-<span>♥</span>
-Perfect Personal Gift
-</div>
-
-</div>
-
-</div>
-
-<div class="bashi-cta">
-
-<h3>MAKE IT YOURS!</h3>
-
-<p>
-Interested in ordering a personalised
-clutch bag? Submit your interest and
-preferred embroidery name through our
-dedicated order interest form.
-</p>
-
-<p style="color:#f2d99b;">
-Choose your own name for embroidery!
-</p>
-
-<!-- NEW CLUTCH BAG FORM -->
-<a
-href="https://forms.gle/DA7BNtBnzqXnNF4M8"
-target="_blank"
-rel="noopener"
-class="bashi-button"
->
-♥ ORDER INTEREST FORM
-</a>
-
-<p style="margin-top:15px;margin-bottom:0;">
-Personalised Clutch Bag Registration
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<p class="bashi-note">
-Product design, personalisation and order details
-are subject to confirmation.
-</p>
-
-</div>
 
 </section>
 
@@ -1405,32 +1810,53 @@ are subject to confirmation.
 <div class="register-content">
 
 <div class="section-title">
+
 <span>BE PART OF THE CELEBRATION</span>
+
 <h2>ANNIVERSARY RSVP</h2>
+
 <div class="gold-line"></div>
+
 </div>
 
 <p>
+
 Join us in commemorating 20 years of the
+
 Sukhoi Su-30MKM in the Royal Malaysian Air Force.
+
 Register your interest and stay informed about
+
 the anniversary celebration.
+
 </p>
 
 <p>
+
 <strong style="color:var(--gold)">
+
 Proposed ceremony period: April – June 2027
+
 </strong>
+
 </p>
 
 <!-- ORIGINAL ANNIVERSARY RSVP FORM -->
+
 <a
+
 href="https://forms.gle/o8WcX6q45oEqRE4JA"
+
 target="_blank"
+
 rel="noopener"
+
 class="btn"
->
+
+> 
+
 ANNIVERSARY RSVP
+
 </a>
 
 </div>
@@ -1442,16 +1868,25 @@ ANNIVERSARY RSVP
 <footer>
 
 <div class="footer-logos">
+
 <img src="assets/tudm_crest.png" alt="TUDM">
+
 <img src="assets/squadron_11.png" alt="11 Squadron">
+
 <img src="assets/squadron_badge.png" alt="12 Squadron">
+
 </div>
 
 <p>
+
 <strong>SU-30MKM 20 ANNIVERSARY</strong><br>
+
 2007 — 2027<br>
+
 Royal Malaysian Air Force<br><br>
+
 © 2027 | All Rights Reserved
+
 </p>
 
 </footer>
@@ -1461,61 +1896,87 @@ Royal Malaysian Air Force<br><br>
 /* MOBILE MENU */
 
 function toggleMenu() {
+
 document.getElementById("navLinks").classList.toggle("show");
+
 }
 
 function closeMenu() {
+
 document.getElementById("navLinks").classList.remove("show");
+
 }
 
 /* COUNTDOWN */
 
 const anniversaryDate =
+
 new Date("2027-06-19T00:00:00+08:00").getTime();
 
 function updateCountdown() {
 
 const now = new Date().getTime();
+
 const distance = anniversaryDate - now;
 
 if (distance <= 0) {
+
 document.getElementById("days").textContent = "000";
+
 document.getElementById("hours").textContent = "00";
+
 document.getElementById("minutes").textContent = "00";
+
 document.getElementById("seconds").textContent = "00";
+
 return;
+
 }
 
 const days = Math.floor(distance / (1000*60*60*24));
+
 const hours = Math.floor((distance / (1000*60*60)) % 24);
+
 const minutes = Math.floor((distance / (1000*60)) % 60);
+
 const seconds = Math.floor((distance / 1000) % 60);
 
 document.getElementById("days").textContent = days;
 
 document.getElementById("hours").textContent =
+
 String(hours).padStart(2,"0");
 
 document.getElementById("minutes").textContent =
+
 String(minutes).padStart(2,"0");
 
 document.getElementById("seconds").textContent =
+
 String(seconds).padStart(2,"0");
+
 }
 
 updateCountdown();
+
 setInterval(updateCountdown,1000);
 
 /* GALLERY LIGHTBOX */
 
 function openImage(element) {
+
 const image = element.querySelector("img");
+
 document.getElementById("lightboxImage").src = image.src;
+
 document.getElementById("lightbox").style.display = "flex";
+
 }
 
 function closeImage() {
+
 document.getElementById("lightbox").style.display = "none";
+
 }
 
 /* SCROLL REVEAL */
@@ -1525,7 +1986,9 @@ const observer = new IntersectionObserver((entries) => {
 entries.forEach(entry => {
 
 if (entry.isIntersecting) {
+
 entry.target.classList.add("active");
+
 }
 
 });
@@ -1533,10 +1996,13 @@ entry.target.classList.add("active");
 },{threshold:0.12});
 
 document.querySelectorAll(".reveal").forEach(element => {
+
 observer.observe(element);
+
 });
 
 </script>
 
 </body>
+
 </html>
